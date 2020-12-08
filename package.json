@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon -e ts -w ./ -x npm run start-nodemon",
-    "pro":"",
-    "start-nodemon":"tsc && node build/index.js"
+    "dev": "nodemon -e ts -w ./ -x npm run start-nodemon",
+    "pro": "npm run build",
+    "start-nodemon": "tsc && node build/index.js"
   },
   "author": "lanster.wang",
   "license": "ISC",

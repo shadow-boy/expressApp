@@ -17,6 +17,7 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.use("/user", userRouter)
 app.use("/banner", bannerRouter)
+// app.use("/static",express.static(__dirname+"/public"))
 
 
 //错误处理中间件需要放在路由配置之后
