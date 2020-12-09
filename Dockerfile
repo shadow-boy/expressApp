@@ -6,11 +6,14 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY . /app
+COPY package*.json ./
 
 RUN npm install
-RUN mv ./build/* ./
 
-EXPOSE 8082
 
-CMD BUILD_ENV=docker node build/index.js
+COPY . .
+ENV PORT 3000
+
+EXPOSE 3000
+
+CMD [ "node", "/app/build/index.js" ]

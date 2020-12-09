@@ -3,18 +3,18 @@ const release = false
 const configAll = {
     debug: {
         sql: {
-            sqlServer: "",
-            sqlDatabase: "",
-            sqlUser: "",
-            sqlpwd: ""
+            sqlServer: "132.232.22.58",
+            sqlDatabase: "sportstest",
+            sqlUser: "root",
+            sqlpwd: "123456"
         }
     },
     release: {
         sql: {
-            sqlServer: "",
-            sqlDatabase: "",
-            sqlUser: "",
-            sqlpwd: ""
+            sqlServer: "132.232.22.58",
+            sqlDatabase: "sportproduction",
+            sqlUser: "root",
+            sqlpwd: "123456"
         }
     }
 }
