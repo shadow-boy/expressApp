@@ -1,0 +1,2 @@
+CREATE DATABASE IF NOT EXISTS `sportstest`;
+CREATE DATABASE IF NOT EXISTS `sportproduction`;
