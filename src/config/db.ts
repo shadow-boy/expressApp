@@ -3,7 +3,8 @@ const release = false
 const configAll = {
     debug: {
         sql: {
-            sqlServer: "132.232.22.58",
+            // sqlServer: "132.232.22.58",
+            sqlServer: "localhost",
             sqlDatabase: "sportstest",
             sqlUser: "root",
             sqlpwd: "123456"

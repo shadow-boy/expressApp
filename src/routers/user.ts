@@ -1,3 +1,5 @@
+
+
 import express, { Router } from "express"
 var router = express.Router()
 router.post("/add", (req, res, next) => {
@@ -16,7 +18,7 @@ router.get("/banner", (req, res) => {
     res.redirect("default")
 })
 
-router.get("/error", (req, res) => {
+router.get("/error", async (req, res) => {
     // throw new Error("broken!")
     throw new Error("went wrong!")
     // res.status(500).send('Something broke!')

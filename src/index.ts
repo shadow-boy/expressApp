@@ -5,6 +5,8 @@ import bannerRouter from "./routers/banner"
 import middleware from "./middleware/middleware"
 import ErrorHandler from "./middleware/errror"
 import DBManager from "./database/DBManager"
+import PhotoRouter from "./routers/photo"
+
 
 
 const app = express()
@@ -19,6 +21,7 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.use("/user", userRouter)
 app.use("/banner", bannerRouter)
+app.use("/photo", PhotoRouter)
 // app.use("/static",express.static(__dirname+"/public"))
 
 
