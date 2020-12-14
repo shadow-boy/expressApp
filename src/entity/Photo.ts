@@ -1,5 +1,5 @@
-import { BaseEntity, Column, Entity, OneToOne, PrimaryGeneratedColumn } from "typeorm";
-import { PhotoMetadata } from "./PhotoMetadata";
+import {BaseEntity, Column, Entity, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import {PhotoMetadata} from "./PhotoMetadata";
 
 
 @Entity()
@@ -22,7 +22,7 @@ export default class Photo extends BaseEntity {
     @Column()
     isPublished: boolean;
 
-    @OneToOne(type=>PhotoMetadata,photoMeta=>photoMeta.photo)
+    @OneToOne(type => PhotoMetadata, photoMeta => photoMeta.photo)
     metadata: PhotoMetadata;
 
 }

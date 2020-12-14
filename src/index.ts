@@ -1,12 +1,12 @@
 import express from "express"
 import "reflect-metadata"
-import userRouter from './routers/user'
-import bannerRouter from "./routers/banner"
+import userRouter from './controllers/UserController'
+import bannerRouter from "./controllers/BannerController"
 import middleware from "./middleware/middleware"
 import ErrorHandler from "./middleware/errror"
 import DBManager from "./database/DBManager"
-import PhotoRouter from "./routers/photo"
-
+import PhotoRouter from "./controllers/PhotoController"
+import {useExpressServer} from "routing-controllers";
 
 
 const app = express()
@@ -16,13 +16,12 @@ const port = 3000
 app.use(middleware)
 
 
-
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.use("/user", userRouter)
-app.use("/banner", bannerRouter)
-app.use("/photo", PhotoRouter)
-// app.use("/static",express.static(__dirname+"/public"))
+
+useExpressServer(app, {
+    controllers: [__dirname + '/controllers/*{.js,.ts}'], // register controllers routes in our express app
+})
 
 
 //错误处理中间件需要放在路由配置之后

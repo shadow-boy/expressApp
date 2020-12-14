@@ -1,13 +1,15 @@
-import express, { Router } from "express"
-var router = express.Router()
-
-router.get("/", (req, res) => {
-    res.send(resResult)
-})
-
-export default router
+import {Get, JsonController} from "routing-controllers";
 
 
+@JsonController("/banner")
+export default class BannerController {
+    @Get()
+    getAllBanner() {
+        return resResult
+
+    }
+
+}
 
 let resResult = {
     banner: [
