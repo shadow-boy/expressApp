@@ -1,12 +1,10 @@
 import express from "express"
 import "reflect-metadata"
-import userRouter from './controllers/UserController'
-import bannerRouter from "./controllers/BannerController"
 import middleware from "./middleware/middleware"
 import ErrorHandler from "./middleware/errror"
 import DBManager from "./database/DBManager"
-import PhotoRouter from "./controllers/PhotoController"
 import {useExpressServer} from "routing-controllers";
+import SportsNewsController from "./controllers/SportsNewsController"
 
 
 const app = express()
@@ -28,6 +26,8 @@ useExpressServer(app, {
 app.use(ErrorHandler)
 
 DBManager.share().then(res => {
+    let newsController = new SportsNewsController()
+    newsController.importData()
 })
 
 

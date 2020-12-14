@@ -24,7 +24,8 @@ export default class DBManager {
                     __dirname + '/../entity/*.js'
 
                 ],
-                synchronize: true
+                synchronize: true,
+                charset:"utf8mb4"
             }
             let connection = await createConnection(options)
             shareConnection = connection

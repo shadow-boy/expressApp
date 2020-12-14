@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -e ts -w ./ -x npm run start-nodemon",
-    "start-nodemon": "tsc && node build/index"
+    "start-nodemon": "rm -rf ./build && tsc && node build/index"
   },
   "author": "lanster.wang",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "class-transformer": "^0.3.1",
+    "class-validator": "^0.12.2",
     "express": "^4.17.1",
     "multer": "^1.4.2",
     "mysql": "^2.15.16",

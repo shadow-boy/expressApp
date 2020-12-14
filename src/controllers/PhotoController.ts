@@ -32,9 +32,9 @@ export default class PhotoController {
         let metadataRepository = connection.getRepository(PhotoMetadata)
 
 
-        // await photoRepository.save(photo);
+        await photoRepository.save(photo);
 
-        // let metaDataEntity = await metadataRepository.save(metadata);
+        let metaDataEntity = await metadataRepository.save(metadata);
 
 
         //    let [photos,count] = await  photoRepository.findAndCount()
