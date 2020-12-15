@@ -4,6 +4,7 @@ import DBManager from "./database/DBManager"
 import { useContainer, useExpressServer } from "routing-controllers";
 import SportsNewsController from "./controllers/SportsNewsController"
 import { Container } from "typedi/Container";
+import log4js from "./utils/log4js";
 
 
 const app = express()
@@ -20,13 +21,7 @@ useExpressServer(app, {
     interceptors: [__dirname + '/interceptors/*{.js,.ts}'],
 })
 
-
-function errorHandler(err, req, res, next) {
-    res.status(500)
-    res.render('error', { error: err })
-}
-app.use(errorHandler)
-
+log4js(app)
 
 DBManager.share().then(res => {
     // let newsController = new SportsNewsController()
