@@ -1,33 +1,36 @@
 import express from "express"
 import "reflect-metadata"
-import middleware from "./middleware/middleware"
-import ErrorHandler from "./middleware/errror"
 import DBManager from "./database/DBManager"
-import {useExpressServer} from "routing-controllers";
+import { useContainer, useExpressServer } from "routing-controllers";
 import SportsNewsController from "./controllers/SportsNewsController"
+import { Container } from "typedi/Container";
 
 
 const app = express()
 const port = 3000
 
-//普通中间件需要放在路由配置之前
-app.use(middleware)
+useContainer(Container)
 
-
-app.get('/', (req, res) => res.send('Hello World!'))
 
 
 useExpressServer(app, {
-    controllers: [__dirname + '/controllers/*{.js,.ts}'], // register controllers routes in our express app
+    controllers: [__dirname + '/controllers/*{.js,.ts}'],
+    defaultErrorHandler: false,
+    middlewares: [__dirname + '/middlewares/*{.js,.ts}'],
+    interceptors: [__dirname + '/interceptors/*{.js,.ts}'],
 })
 
 
-//错误处理中间件需要放在路由配置之后
-app.use(ErrorHandler)
+function errorHandler(err, req, res, next) {
+    res.status(500)
+    res.render('error', { error: err })
+}
+app.use(errorHandler)
+
 
 DBManager.share().then(res => {
-    let newsController = new SportsNewsController()
-    newsController.importData()
+    // let newsController = new SportsNewsController()
+    // newsController.importData()
 })
 
 
