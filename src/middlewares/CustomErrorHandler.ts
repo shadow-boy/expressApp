@@ -8,6 +8,7 @@ export default class CustomErrorHandler implements ExpressErrorMiddlewareInterfa
     public error(error: Error, request: Request, response: Response, next: NextFunction): void {
         console.log(error);
         let resError = new WrapResponse()
+        
         resError.code = "0"
         resError.success = false
         resError.message = error.message
