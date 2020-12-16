@@ -13,7 +13,7 @@ export default class CustomErrorHandler implements ExpressErrorMiddlewareInterfa
         resError.success = false
         resError.message = error.message
         response.send(resError)
-        // next(error)
+        next(error)
     }
 
 }
