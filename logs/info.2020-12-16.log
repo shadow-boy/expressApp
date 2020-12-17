@@ -1,5 +1,0 @@
-[2020-12-16T22:17:20.390] [INFO] http - ::1 - - "POST /photo/add HTTP/1.1" 200 2 "" "PostmanRuntime/7.26.8"
-[2020-12-16T22:17:32.208] [INFO] http - ::1 - - "GET /banner HTTP/1.1" 200 927 "" "PostmanRuntime/7.26.8"
-[2020-12-16T22:28:16.850] [INFO] http - ::1 - - "GET /banner HTTP/1.1" 200 927 "" "PostmanRuntime/7.26.8"
-[2020-12-16T22:29:09.832] [INFO] http - ::1 - - "GET /banner HTTP/1.1" 200 927 "" "PostmanRuntime/7.26.8"
-[2020-12-16T22:29:52.601] [INFO] http - ::1 - - "GET /banner HTTP/1.1" 200 927 "" "PostmanRuntime/7.26.8"

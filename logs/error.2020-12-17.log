@@ -1,3 +1,1 @@
-[2020-12-17T12:23:18.399] [ERROR] http - ::1 - - "POST /banner HTTP/1.1" 404 146 "" "PostmanRuntime/7.26.8"
-[2020-12-17T12:23:21.347] [ERROR] http - ::1 - - "POST /banner HTTP/1.1" 404 146 "" "PostmanRuntime/7.26.8"
-[2020-12-17T12:24:08.407] [ERROR] http - ::1 - - "POST /banner HTTP/1.1" 404 146 "" "PostmanRuntime/7.26.8"
+[2020-12-17T15:06:50.287] [ERROR] http - ::1 - - "GET /news/list HTTP/1.1" 404 148 "" "PostmanRuntime/7.26.8"

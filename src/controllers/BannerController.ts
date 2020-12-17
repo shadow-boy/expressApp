@@ -5,6 +5,8 @@ import {Get, JsonController} from "routing-controllers";
 export default class BannerController {
     @Get()
     getAllBanner() {
+        console.log("bannercontroller");
+        
         return resResult
 
     }

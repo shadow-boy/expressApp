@@ -2,7 +2,7 @@ import { BaseEntity, Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, U
 import TimeLogInterface from "./base";
 
 @Entity()
-export default class NewsYingchao extends BaseEntity  implements TimeLogInterface{
+export default class NewsYingchao extends BaseEntity implements TimeLogInterface {
 
     @CreateDateColumn()
     createdTime: string;
@@ -14,111 +14,107 @@ export default class NewsYingchao extends BaseEntity  implements TimeLogInterfac
 
 
     @Column()
-    app_id:string
+    app_id: string
     @Column()
     intro: string
 
 
     @Column()
-    article_type:string
+    article_type: string
 
 
     @Column()
-    bimg:string
+    bimg: string
 
 
     @Column()
-    category :string
+    category: string
 
     @Column()
-    category1_chn:string
-
-
-    @Column()
-    category1_id:string
+    category1_chn: string
 
 
     @Column()
-    category2_chn:string
+    category1_id: string
 
 
     @Column()
-    category2_id:string
+    category2_chn: string
+
+
+    @Column()
+    category2_id: string
 
     //体育
     @Column()
-    category_chn:string
+    category_chn: string
 
 
     @Column()
-    category_id:string
+    category_id: string
 
 
     @Column()
-    comment_id:string
+    comment_id: string
 
 
     @Column()
-    comment_num:string
+    comment_num: string
 
 
     @Column()
-    duration:string
+    duration: string
+
+    @Column("simple-json")
+    ext: JSON
+
+
+    @Column()
+    flag: string
+
+
+    @Column()
+    fm_url: string
+
 
 
 
 
 
     @Column()
-    flag:string
+    id: string
 
 
     @Column()
-    fm_url:string
-
-
-
-
+    img: string
 
 
     @Column()
-    id:string
+    img_count: string
 
 
     @Column()
-    img:string
+    img_type: string
 
 
-    @Column()
-    img_count:string
+    @Column("simple-json")
+    imgs: JSON
 
 
-    @Column()
-    img_type:string
-
-
-    @Column()
-    imgs:string
-
-    //直播吧11月23日讯3-0莱斯特城赛后，利物浦主帅克洛普确认了另一个好消息，队内大将萨拉赫最新一次新冠检测结果呈阴性。克洛普说：“萨拉赫今天的检测结果转阴，明天我们会统一接受欧足联的检测。”“萨拉……
-    @Column()
-    ro:string
-
-
-    @Column()
-    irs_imgs:string
+    @Column("simple-json")
+    irs_imgs: JSON
 
     //克洛普;萨拉赫;利物浦;莱斯特城
     @Column()
-    keywords:string
+    keywords: string
 
 
     @Column()
-    media_icon:string
+    media_icon: string
 
 
     @Column()
-    mini_img:string
+    mini_img: string
 
 
     @Column("simple-json")
@@ -126,93 +122,93 @@ export default class NewsYingchao extends BaseEntity  implements TimeLogInterfac
 
 
     @Column()
-    news_level:string
+    news_level: string
 
 
     @Column()
-    play_url_high:string
+    play_url_high: string
 
 
     @Column()
-    play_url_medium:string
+    play_url_medium: string
 
 
     @Column()
-    play_url_small:string
+    play_url_small: string
 
 
     @Column()
-    pool_type:string
+    pool_type: string
 
 
     @Column()
-    publish_time:string
+    publish_time: string
+
+
+    @Column("text")
+    report: string
 
 
     @Column()
-    report:string
+    s_group: string
 
 
     @Column()
-    s_group:string
+    showtype: string
+
+    @Column()
+    source: string
 
 
     @Column()
-    showtype:string
-
-    @Column()
-    source:string
+    source_fans: string
 
 
     @Column()
-    source_fans:string
+    source_id: string
 
 
     @Column()
-    source_id:string
+    source_logo: string
 
 
     @Column()
-    source_logo:string
+    strategy: string
 
 
     @Column()
-    strategy:string
-
-
-    @Column()
-    surl:string
+    surl: string
 
 
     @Column("simple-array")
-    tag_label:string[]
+    tag_label: string[]
 
     //克洛普;萨拉赫;新冠;利物浦;莱斯特城
     @Column()
-    tags:string
+    tags: string
 
     // 克洛普确认：萨拉赫新冠检测转阴，可以参加全队合练
     @Column()
-    title:string
+    title: string
 
 
     @Column()
-    ts:string
+    ts: string
 
 
     @Column()
-    update_time:string
+    update_time: string
 
 
     @Column()
-    url:string
+    url: string
 
 
     @Column()
-    view_count:string
+    view_count: string
 
 
     @Column()
-    vurl:string
+    vurl: string
 
 }

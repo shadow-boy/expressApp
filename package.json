@@ -2,7 +2,7 @@
   "name": "expressapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "dev": "nodemon -e ts -w ./ -x npm run start-nodemon",
     "start-nodemon": "rm -rf ./build && tsc && node build/index"

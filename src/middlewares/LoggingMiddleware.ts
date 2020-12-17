@@ -9,9 +9,11 @@ export default class LoggingMiddleware implements ExpressMiddlewareInterface {
         let currentTime = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 
         let action = request.path
-        let query = request.query
+        let body = request.body
+        console.log(request);
+        
 
-        console.log(`${currentTime} \nmethod=${request.method} \nurl=${action} \nquery=${JSON.stringify(query)}`);
+        console.log(`${currentTime} \nmethod=${request.method} \nurl=${action} \nquery=${body} \n`);
         console.log(`---------------------------------------------------------------------------------------------------------`);
 
         next()
