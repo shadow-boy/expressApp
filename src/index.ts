@@ -2,6 +2,8 @@ import express from "express"
 import "reflect-metadata"
 import DBManager from "./database/DBManager"
 import { useContainer, useExpressServer } from "routing-controllers";
+import { getFromContainer, useContainer as typeOrmUseContainer } from 'typeorm';
+
 import SportsNewsController from "./controllers/SportsNewsController"
 import { Container } from "typedi/Container";
 import log4js from "./utils/log4js";
@@ -13,7 +15,7 @@ const app = express()
 const port = 3000
 
 useContainer(Container)
-
+typeOrmUseContainer(Container)
 
 
 useExpressServer(app, {

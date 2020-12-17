@@ -1513,6 +1513,11 @@ typedi@^0.8.0:
   resolved "https://registry.npm.taobao.org/typedi/download/typedi-0.8.0.tgz#d8e203bd1d41a96e2b0a5c6295147d74b2b2d03e"
   integrity sha1-2OIDvR1BqW4rClxilRR9dLKy0D4=
 
+typeorm-typedi-extensions@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.npm.taobao.org/typeorm-typedi-extensions/download/typeorm-typedi-extensions-0.2.3.tgz#94fca2656206d771bf6d2242f5aab570511188e8"
+  integrity sha1-lPyiZWIG13G/bSJC9aq1cFERiOg=
+
 typeorm@^0.2.29:
   version "0.2.29"
   resolved "https://registry.npm.taobao.org/typeorm/download/typeorm-0.2.29.tgz#401289dc91900d72eccb26e31cdb7f0591a2272e"

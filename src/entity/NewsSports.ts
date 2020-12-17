@@ -22,7 +22,7 @@ export default class NewsSports extends BaseEntity implements TimeLogInterface {
     @PrimaryGeneratedColumn()
     newId: string
 
-    @Column()
+    @Column({unique:true})
     id: string
 
     @Column("text")

@@ -12,6 +12,8 @@ export default class NewsYingchao extends BaseEntity implements TimeLogInterface
     @PrimaryGeneratedColumn()
     newId: string
 
+    @Column({unique:true})
+    id: string
 
     @Column()
     app_id: string
@@ -78,11 +80,6 @@ export default class NewsYingchao extends BaseEntity implements TimeLogInterface
 
 
 
-
-
-
-    @Column()
-    id: string
 
 
     @Column()
