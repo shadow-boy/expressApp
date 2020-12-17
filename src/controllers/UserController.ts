@@ -2,6 +2,7 @@ import { IsEmail, MinLength } from "class-validator"
 import { Request, Response } from "express"
 import { Body, BodyParam, JsonController, Post, QueryParams, Req, Res } from "routing-controllers"
 import ExampleService from "../services/ExampleService"
+import JWTUtils, { TokenUser } from "../utils/jwt"
 
 
 export class User {
@@ -39,5 +40,17 @@ export default class UserController {
         return user
 
     }
+
+    @Post("/appLogin")
+    async appLogin(@Body() user: TokenUser, @Res() res: Response) {
+        user.user_id = "0"
+        let token = JWTUtils.encode(user)
+        res.setHeader("Authorization", token)
+
+
+        return user
+
+    }
+
 }
 
