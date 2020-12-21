@@ -10,7 +10,6 @@ export default class LoggingMiddleware implements ExpressMiddlewareInterface {
 
         let action = request.path
         let body = request.body
-        console.log(request);
         
 
         console.log(`${currentTime} \nmethod=${request.method} \nurl=${action} \nquery=${body} \n`);

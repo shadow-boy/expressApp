@@ -9,6 +9,7 @@ import { Container } from "typedi/Container";
 import log4js from "./utils/log4js";
 import WrapResponse from "./models/response/WrapResponse";
 import config from "./config";
+import MatchController from "./controllers/MatchController";
 
 
 const app = express()
@@ -32,6 +33,11 @@ log4js(app)
 DBManager.share().then(res => {
     // let newsController = new SportsNewsController()
     // newsController.importData()
+
+    let matchController = new MatchController()
+    // matchController.importData()
+
+    // matchController.importEsportsMatchList()
 })
 
 
