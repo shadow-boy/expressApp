@@ -34,7 +34,7 @@ DBManager.share().then(res => {
     // let newsController = new SportsNewsController()
     // newsController.importData()
 
-    let matchController = new MatchController()
+    // let matchController = new MatchController()
     // matchController.importData()
 
     // matchController.importEsportsMatchList()
