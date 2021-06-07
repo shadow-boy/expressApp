@@ -1,4 +1,3 @@
-
 const release = false
 const configAll = {
     debug: {

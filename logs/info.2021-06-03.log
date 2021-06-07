@@ -1,0 +1,7 @@
+[2021-06-03T16:31:59.818] [INFO] http - ::ffff:192.168.2.8 - - "POST /codefly/update_check HTTP/1.1" 200 390 "" "okhttp/3.12.12"
+[2021-06-03T16:32:31.204] [INFO] http - ::ffff:192.168.2.8 - - "POST /codefly/update_check HTTP/1.1" 200 390 "" "okhttp/3.12.12"
+[2021-06-03T16:32:56.696] [INFO] http - ::ffff:192.168.2.8 - - "POST /codefly/update_check HTTP/1.1" 200 390 "" "okhttp/3.12.12"
+[2021-06-03T16:33:41.753] [INFO] http - ::ffff:192.168.2.8 - - "POST /codefly/update_check HTTP/1.1" 200 390 "" "okhttp/3.12.12"
+[2021-06-03T16:38:00.336] [INFO] http - ::ffff:192.168.2.8 - - "POST /codefly/update_check HTTP/1.1" 200 390 "" "okhttp/3.12.12"
+[2021-06-03T16:59:43.086] [INFO] http - ::ffff:192.168.2.8 - - "POST /codefly/update_check HTTP/1.1" 200 479 "" "okhttp/3.12.12"
+[2021-06-03T17:00:31.090] [INFO] http - ::ffff:192.168.2.8 - - "POST /codefly/update_check HTTP/1.1" 200 479 "" "okhttp/3.12.12"
